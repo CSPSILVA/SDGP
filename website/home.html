@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Interface</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+	<link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<header class="navbar">
+	<div class="logo">
+		<img src="C:/Users/ASUS/OneDrive/Desktop/website/logo_1.png" alt="Tour Pal Logo" />
+	</div>
+    <div class="search-bar">
+		<li class="search-bar">
+            <input type="text" class="search-box" placeholder="Search..." aria-label="Search">
+        </li>
+	</div>
+	<ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+		<li><a href="#">Destinations</a></li>
+        <li><a href="#">Tour planing</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+	</ul>
+	<div class="auth-links">
+        <a href="#" class="login-button">SignUp</a>
+		<a href="#" class="login-button">Login</a>	
+    </div>
+</header>
+
+	<!-- 	<li><a href="#">Destinations</a></li>
+		<li><a href="#">All categories</a></li>
+		<li><a href="#">Attraction tickets</a></li>
+		<li><a href="#">Tours & activities</a></li>
+		<li><a href="#">Cultural experiences</a></li>
+		<li><a href="#">Weather and seasonal insights</a></li>
+		<li><a href="#">Emergency assistance</a></li>  ... -->
+		
+<div class="welcome">
+	<h1>Welcome to Tour Pal</h1>
+	<p>Hi hello welcome to tour pal which is a website to make easy for your'll to plan your tours easy accaording to your budget</p>
+</div>
+
+<div class="search-area">
+    <input type="text" class="search-box" placeholder="Search for destinations, activities..." aria-label="Search">
+    <button class="search-button">Search</button>
+</div>
+
+<!-- ... Your content goes here ... -->
+<section class="features">
+  <div class="feature-item">
+    <img src="C:/Users/ASUS/OneDrive/Desktop/website/icons/icon1.png" alt="Discover Icon">
+    <h3>Keep things flexible</h3>
+    <p>Use reserve now and pay later to secure the activities you don’t want to miss without being locked in.</p>
+  </div>
+  <div class="feature-item">
+    <img src="C:/Users/ASUS/OneDrive/Desktop/website/icons/icon2.png" alt="Deals Icon">
+    <h3>Free cancellation</h3>
+    <p>You'll receive a full refund if you cancel at least 72 hours in advance of most experiences.</p>
+  </div>
+  <div class="feature-item">
+    <img src="C:/Users/ASUS/OneDrive/Desktop/website/icons/icon3.png" alt="Deals Icon">
+    <h3>Trusted reviews</h3>
+    <p>We let users to give their honest reviews about our service.</p>
+  </div>
+  <div class="feature-item">
+    <img src="C:/Users/ASUS/OneDrive/Desktop/website/icons/icon4.png" alt="Deals Icon">
+    <h3>Leave the planning to us</h3>
+    <p>Tell us your destination, date, and group size Our team of travel experts and guides will design a tailored itinerary just for you.</p>
+  </div>
+</section>
+
+<section class="top-attractions">
+  <h2>Top Attractions in Sri Lanka</h2>
+  <div id="attractions-container">
+    <!-- Attraction items will be populated here by JavaScript -->
+  </div>
+  <button id="see-more">See more</button>
+</section>
+
+<section class="spotlight-destinations">
+  <h2>Spotlight Destinations on Tourpal</h2>
+  <div id="destination-container">
+    <!-- Destination cards will be populated here -->
+  </div>
+</section>
+
+<section class="interests-section">
+  <h2>Where to next?</h2>
+  <div class="interests-container">
+    <button class="scroll-btn left-scroll">&lt;</button>
+    <div class="interests">
+      <!-- Destination cards will be inserted here via JavaScript -->
+    </div>
+    <button class="scroll-btn right-scroll">&gt;</button>
+  </div>
+</section>
+
+
+
+
+<!-- Link to the JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>

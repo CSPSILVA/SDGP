@@ -1,0 +1,155 @@
+/* Logo styling */
+.logo {
+    flex-grow: 1; /* Adjust size as needed */
+    display: flex;
+    align-items: center; /* Align logo vertically */
+}
+
+.logo img {
+    max-height: 50px; /* Example size, adjust as needed */
+	width: 80px;
+}
+
+/* Ensure the .nav-links and .auth-links do not grow excessively */
+.nav-links, .auth-links {
+    flex-grow: 0;
+    flex-basis: auto;
+}
+
+/* Styling the navigation bar */
+.navbar {
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000; /* Ensure navbar is above other elements */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    padding: 10px 15px;
+	position: relative;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #0277bd; /* Blue color for links */
+    font-weight: bold;
+}
+
+/* Active state for menu items */
+.navbar a:hover,
+.navbar a.active {
+    color: #e22b52; /* Red color for active/hover state */
+}
+
+/* added new */
+
+/* Navigation links container */
+.nav-links {
+    flex-grow: 2; /* Allows the nav links to take up twice as much space as search/login */
+    display: flex;
+    justify-content: center;
+    list-style: none; /* Removes default list styling */
+}
+
+/* Individual navigation links */
+.nav-links li {
+    padding: 0 15px; /* Spacing between nav items */
+}
+
+/* Login/Signup to the right */
+.auth-links {
+    flex-grow: 1; /* Same as search bar for balance */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Style for login and signup links */
+.auth-links a {
+    margin-left: 15px; /* Spacing between auth links */
+    text-decoration: none;
+    color: #0277bd;
+    font-weight: bold;
+}
+
+/* Style the search bar container */
+.navbar .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-grow: 1;
+}
+
+/* Style the input field */
+.navbar .search-box {
+    padding: 8px 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+/* Style the search button */
+.navbar .search-button {
+    padding: 8px 15px;
+    background-color: #e22b52; /* Red background to stand out */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar .search-bar {
+        order: 1; /* Place the search bar at the top on smaller screens */
+        width: 100%; /* Full width for the search bar container */
+    }
+
+    .navbar .search-box,
+    .navbar .search-button {
+        width: 100%; /* Full width for search input and button on smaller screens */
+    }
+
+    .navbar .search-box {
+        margin-right: 0; /* No margin for the search input on smaller screens */
+        margin-bottom: 5px; /* Add some space below the input */
+    }
+}
+
+/* Style the login button */
+.navbar .login-button {
+    padding: 8px 16px;
+    background-color: #1a71cf; /* Blue background for the button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+	background-color: #e22b52; /* Red background for the button */
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Change background color on hover for the button */
+.navbar .login-button:hover {
+    background-color: #1a71cf; /* Darker blue on hover */
+    text-decoration: none; /* No underline on hover */
+}

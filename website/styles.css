@@ -1,0 +1,284 @@
+/* Reset some default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes backgroundSlide {
+    0% { background-image: url('C:/Users/ASUS/OneDrive/Desktop/website/background1.jpg'); }
+    33% { background-image: url('C:/Users/ASUS/OneDrive/Desktop/website/background1.jpg'); }
+    34% { background-image: url('C:/Users/ASUS/OneDrive/Desktop/website/background2.png'); }
+    67% { background-image: url('C:/Users/ASUS/OneDrive/Desktop/website/background2.png'); }
+    68% { background-image: url('C:/Users/ASUS/OneDrive/Desktop/website/background3.jpg'); }
+    100% { background-image: url('C:/Users/ASUS/OneDrive/Desktop/website/background3.jpg'); }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /*background: url('C:/Users/ASUS/OneDrive/Desktop/website/bg_image.png') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;*/
+	
+	/* Set the animation */
+    animation-name: backgroundSlide;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s; /* Adjust the time for each image */
+    animation-iteration-count: infinite;
+    
+    /* Other background properties */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* Smooth transition between backgrounds */
+    transition: background 1s;
+}
+
+
+
+.welcome {
+    text-align: center; /* Center-align text */
+    padding: 50px 20px; /* Add padding for spacing */
+    background: rgba(255, 255, 255, 0.9); /* Optional: semi-transparent white background */
+    margin-top: 100px; /* Space below the menu bar */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+    max-width: 800px; /* Max width for the container */
+    margin-left: auto; /* Auto margins for center alignment */
+    margin-right: auto;
+}
+
+.welcome h1 {
+    color: #0277bd; /* Theme color for the header text */
+    font-size: 2.5em; /* Large font size for the header */
+    margin-bottom: 0.5em; /* Space between the header and paragraph */
+    font-weight: bold; /* Bold font weight for the header */
+}
+
+.welcome p {
+    color: #666; /* Subtle color for the paragraph */
+    font-size: 1.2em; /* Readable font size for the paragraph */
+    line-height: 1.6; /* Spacing between lines */
+}
+
+
+
+
+
+/* added new */
+
+/* Search area styling */
+.search-area {
+    position: relative;
+    max-width: 600px;
+    margin: 100px auto 50px;
+    padding: 15px;
+    text-align: center;
+}
+
+.search-box {
+    width: calc(100% - 60px);
+    padding: 15px 20px;
+    border: 2px solid #0277bd; /* Blue border for the search box */
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none; /* Remove default focus outline */
+    transition: all 0.3s; /* Smooth transition for interactions */
+}
+
+.search-box:focus {
+    border-color: #ff5252; /* Red border color on focus */
+}
+
+.search-button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff5252; /* Red background for the button */
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    right: 47px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    outline: none;
+}
+
+/* Adaptations for mobile screens */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .search-box {
+        width: calc(100% - 60px); /* Adjust width for smaller screens */
+    }
+
+    .search-button {
+        width: 100%;
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* Adjust the color as needed */
+}
+
+.feature-item {
+  flex: 1;
+  margin: 10px;
+}
+
+.feature-item img {
+  width: 75px; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
+
+.feature-item h3 {
+  color: #0277bd; /* Example color; adjust as needed */
+  margin-bottom: 5px;
+}
+
+.feature-item p {
+  color: #666;
+  font-size: 1.0em;
+}
+
+.top-attractions {
+  text-align: center;
+  padding: 20px;
+}
+
+.top-attractions h2 {
+  margin-bottom: 20px;
+}
+
+#attractions-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.attraction-item {
+  width: calc(20% - 10px);
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.attraction-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+#see-more {
+  background-color: #0277bd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.spotlight-destinations {
+  padding: 20px;
+  text-align: center;
+}
+
+.spotlight-destinations h2 {
+  margin-bottom: 20px;
+}
+
+#destination-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.destination-card {
+  width: calc(33.333% - 20px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.destination-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.destination-card h3 {
+  font-size: 1.2em;
+  color: #333;
+  padding: 10px;
+}
+
+.destination-card p {
+  font-size: 1em;
+  color: #666;
+  padding: 0 10px 20px;
+}
+
+
+.interests-section {
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+.interests-container {
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.interests {
+  display: inline-flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.interests::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.destination-card {
+  display: inline-block;
+  margin: 10px;
+  width: 300px; /* Set a fixed width for the cards */
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.left-scroll {
+  left: 0;
+}
+
+.right-scroll {
+  right: 0;
+}
+
